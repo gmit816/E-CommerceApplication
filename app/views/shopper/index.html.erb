@@ -3,14 +3,24 @@
 <% end %>
 
 <h1>Product Catalog</h1>
+<div style="width:100%;">
 <% @products.each do |product| %>
-    <div class="entry">
+    <div class="entry" style="width:24.6%">
+        <div>
             <%= image_tag(product.image) %>
+        </div>
+        <div>
             <h3><%= product.name %></h3>
+        </div>
+        <div>
             <%= sanitize(product.description) %>
+        </div>
         <div class="price_line">
             <span class="price">$<%= product.price %></span>
         </div>
+        <div>
             <%= button_to 'Add to Cart', lineitems_path(product_id: product), class: "add_to_cart", remote: true %>
+        </div>
+    </div>
 <% end %>
 <div>

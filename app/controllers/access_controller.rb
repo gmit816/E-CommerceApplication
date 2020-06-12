@@ -1,7 +1,6 @@
 class AccessController < ApplicationController
   
   include CurrentCart
-
   before_action :set_cart
   def new
     if session[:user_id]       

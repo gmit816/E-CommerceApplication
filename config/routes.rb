@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   get 'login', to: "access#new"
   get 'authenticate', to: "access#create"
   delete 'logout', to: "access#destroy"
-  
+  post 'login', to: "access#new"
 
   resources :users
   resources :orders

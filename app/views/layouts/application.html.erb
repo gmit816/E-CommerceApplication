@@ -17,7 +17,9 @@
     <div id="columns">
       <div id="side">
        <div id="cart">
-          <%= render @cart %>
+        <% if !session[:user_id]%>
+            <%= render @cart %>        
+        <% end %>
        </div>
       <ul>
         <li><a href="">Home</a></li>
@@ -25,6 +27,9 @@
         <li><a href="">News</a></li>
         <li><a href="">Contacts</a></li>
       </ul>
+      <% if !session[:user_id]%>
+            <%= button_to 'Login', login_path %>      
+      <% end %> 
       <% if session[:user_id] %>  
         <ul>           
           <li><%= link_to 'Orders',   orders_path   %></li>          

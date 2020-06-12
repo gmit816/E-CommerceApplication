@@ -14,15 +14,21 @@
     /* An entry in the store catalog */
     .entry {
       overflow: auto;
+      display: inline-block;
+      vertical-align: middle;
+      align-content: center;
       margin-top: 1em;
       border-bottom: 1px dotted #77d;
+      border-right: 1px dotted #77d;
       min-height: 100px;
+      height: 300px;
+      text-align: center;
       img {
-        width: 80px;
-      margin-right: 5px;
-      margin-bottom: 5px;
-      position: absolute;
-}
+        width: 150px;
+        height: 120px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+      }
   
       h3 {
         font-size: 120%;
@@ -40,7 +46,7 @@
       .price {
         color: #44a;
         font-weight: bold;
-        margin-right: 3em;
+        //margin-right: 3em;
       }
     }
   }
